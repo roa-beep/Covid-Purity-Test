@@ -4,7 +4,7 @@ With the pandemic flying high on our radars, we as a society have been through l
 
 Through the year and a quarter, we have tried to move around trying to avoid the virus by changing our habits and everyday activities. But, how do we know how safe we are with the way we currently live?
 
-**Introducing The Covid-Purity Test**
+### **Introducing The Covid-Purity Test**
 
 > Inspiration taken from the rice purity test
 
