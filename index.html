@@ -1,0 +1,57 @@
+<html>
+<head>
+<!-- Style -->
+        <style>
+            
+        html {
+            background-color: #FBEEC8;
+            background-image: url("owl.png");
+        }
+        
+        body {
+            text-align: center;
+        }
+        #list {
+            text-align: left;
+        }
+        h1 {
+            font-size: 300%;
+            font-weight: bold;
+            color: red;
+            padding:0px;
+            margin:0px;
+        }
+        
+        .button {
+            text-align: center;
+            width: 10%;
+            border-radius: 20px;
+            background-color: rgba(255, 119, 100, 0.3);
+            color: rgb(0, 0, 5);
+            position: relative;
+            left: 200px;
+        }
+
+        ls{
+          display: flex;
+        }
+        
+        </style>
+</head>
+<body>
+<div id="toHide">
+  <div >
+    <ol id="list"></ol>
+    
+    <input class="button" id="submit" type="submit" value="Calculate My Score!">
+    
+    <input class="button" id="reset" type="submit" value="Clear checkboxes">
+  </div>
+</div>
+<div id="toShow">
+  <h2 id="test">Your score:</h2>
+  <h1 id="score"></h1>
+</div>
+  <script src="scripts.js"></script>
+</body>
+</html>
