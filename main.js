@@ -62,3 +62,66 @@ let questions = [
   "Will you use the new arm to take over Albania?",
   "Will you use your third arm to defend Albania?",
 ];
+
+const questionList = document.querySelector('#list');
+questions.forEach(function (question, index){
+
+    const ls = document.createElement('ls');
+    const checker = document.createElement('input');
+    //const br = document.createElement('br');
+    const div = document.createElement('div');
+    
+    
+    checker.type = 'checkbox';
+    checker.setAttribute('id', index.toString());
+    
+    
+    div.textContent = question;
+    ls.appendChild(checker);
+    ls.appendChild(div);
+    console.log(ls);
+    console.log(questionList);
+    console.log(checker);
+    questionList.appendChild(ls);
+    //questionList.appendChild(br);
+       
+        
+        
+});
+
+// IDs
+// toHide: Everything that needs to be hidden when score is shown
+// toShow: Everything that needs to be shown when score is shown
+// score: h1 that shows the score
+
+// Initially hides results
+const results = document.querySelector('#toShow');
+results.style.display="none";
+const main = document.querySelector('#toHide');
+const score = document.querySelector('#score');
+
+// On click of the submit button: 
+submitButton = document.querySelector('#submit');
+submitButton.addEventListener("click", () => {
+    // Calculates purity
+    var sinList = document.querySelectorAll('input[type="checkbox"]:checked');
+    var sins = sinList.length;
+    var purity = 60-sins;
+    
+
+    // Shows the score in the h1
+    score.textContent = purity;
+    
+    // Shows the score and hides the checks
+    results.style.display="block";
+    
+    main.style.display="none";
+    
+});
+
+// On click of the reset button: 
+resetButton = document.querySelector('#reset');
+resetButton.addEventListener("click", () => {
+    document.querySelectorAll('input[type="checkbox"]')
+    .forEach(el => el.checked = false);
+});
